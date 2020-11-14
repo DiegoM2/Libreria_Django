@@ -21,12 +21,9 @@
   </head>
 
   <body>
+    {%include "./header.html" %} <!--Esto importa el header completo definido en header.html-->
 
-    {% block header %}
-      {%include "./header.html" %}
-    {% endblock %}
-
-    <!-- Este div contiene la imagen de debajo del Header. -->
+    <!-- El div de abajo contiene el carrusel de imagenes ubicado debajo del Header. -->
     <div class="row center-xs" id="carrusel">
       <div class="col-xs-12">
         <!-- Slideshow container -->
@@ -64,12 +61,13 @@
 
       </div>
     </div>
-    
-    <h2 id="bestSeller">
+
+    <h2 id="bestSeller"> <!--Titulo de la sección-->
       Los más vendidos
     </h2>
 
-    <!-- Esta sección contiene todos los libros-->
+    <!-- Esta sección contiene todos los libros. 
+    ESTO PRIMERO DEBE CAMBIARSE PARA QUE LOS LIBROS SE CARGUEN DESDE BD, LUEGO HACER QUE SE AGRUPEN EN PÁGINAS CON ALGO COMO 'PAGINATOR'-->
     <section  id="display_libros">
       
       {% for libro in libros %}
@@ -223,10 +221,10 @@
 
     </section>
 
-    {% block footer %}
-      {% include "./footer.html" %}
-    {% endblock %}
 
-      <script src="js/script.js"></script>
+    {% include "./footer.html" %} <!--Importa el footer definido en 'footer.html'-->
+
+
+    <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>

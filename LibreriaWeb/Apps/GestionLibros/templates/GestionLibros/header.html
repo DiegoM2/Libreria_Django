@@ -1,10 +1,7 @@
-{% extends "./index.html" %}
 {% load static %}
 
-{% block header %}
 <!-- Logo, sección nav superior, y barra de busqueda-->
     <header id="banner"> 
-
         <div class="row middle-xs">
         <div class="col-xs-3"> <!--Logo de la página-->
             <a href="index">
@@ -26,7 +23,8 @@
         </div>
         </div>
 
-        <div id="modal_usuario">
+        <!-- Se supone que esto de abajo es un recuadro que se puede abrir, con opciones placeholder para iniciar sesión, recuperar y registrar cuenta-->
+        <div id="modal_usuario"> 
         <span class="cerrar" onclick="cerrarModal()">&times;</span>
         <p>Nombre de usuario</p>
         <input id="username" type="text">
@@ -43,29 +41,17 @@
         <label for="btn_menu"><img src="{% static 'img/icono_menu' %}" height="35vh" width="35vw"></label>
         <nav>
             <ul>
-            <li>
-                <a  href="index">Inicio</a>
-            </li>
-            <li>
-                <a href="">Los más vendidos</a>
-            </li>
-            <li>
-                <a  href="">Ofertas</a>
-            </li>
-            <li>
-                <a  href="">Géneros</a>
-            </li>
-            <li>
-                <a  href="nosotros">Quienes somos</a>
-            </li>
-            <li>
-                <a  href="contacto">Contacto</a>
-            </li>
+                <li> <a href="index">Inicio</a> </li>
+                <li> <a href="">Los más vendidos</a> </li>
+                <li> <a href="">Ofertas</a> </li>
+                <li> <a href="">Géneros</a> </li>
+                <li> <a href="nosotros">Quienes somos</a> </li>
+                <li> <a href="contacto">Contacto</a> </li>
             </ul>
             
         </nav>
 
 </header>
-{% endblock %}
+
 
     
