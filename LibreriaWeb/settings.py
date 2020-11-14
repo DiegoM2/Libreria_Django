@@ -99,6 +99,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'qe^2z81&dlse_+nw_djq=!1web2q%hq7cdx9cq*ecit5nfkplo'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
