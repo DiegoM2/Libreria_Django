@@ -1,0 +1,349 @@
+body{
+    background-color: #9acedb; 
+}
+
+#banner {
+    background-color: #3a5992; 
+}
+
+#logo{
+    margin: 10px; 
+    width: 60%; 
+}
+
+#buscarLibro {
+    margin-left:10vw;
+    text-align: center;
+}
+
+#buscarLibro input{
+    border-radius: 5px;
+    font-size: 1.2vw;
+}
+
+#buscarLibro button{
+    font-size: 1.3vw;
+}
+
+#usuario_carrito{
+    text-align: right;
+}
+
+#usuario_carrito img{
+    width: 3.1vw;
+    height: 3.5vw;
+    margin-right: 2vw;
+}
+ 
+nav{
+    text-align: center; 
+    background-color: #34318a; 
+    padding: 2px; 
+}
+
+nav ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+nav li a:hover{
+    background-color:#ee7522;
+
+}
+
+nav li a:active{
+    background-color:#162227;
+}
+nav li a{
+    font: normal bold 1.25vw sans-serif;
+    margin: 0.4vh 0.1vw;
+    padding: 1.1vh 1vw;
+    border:1px black solid;
+    background-color:#3a5990;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+
+#contactenos a{
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+}
+
+#asunto
+{
+    background-color: #2B7A78;
+    border:2px solid black;
+    color: #DEF2F1;
+}
+
+footer{
+    font-size: 1.3vw;
+    line-height: 150%;
+    margin-top: 30px;
+    padding-bottom: 2%;
+    background-color: #06070a; 
+}
+
+footer a, p{
+    color: white;
+    font-family: sans-serif; 
+}
+
+#btn_menu{
+    display: none;
+}
+
+label{
+    font-family: sans-serif;
+}
+
+header label{
+    display: none;
+    width: 30px;
+    height:30px;
+    margin: 10px;
+}
+
+header label:hover{
+    cursor: pointer;
+    background-color: rgb(76, 85, 104);
+}
+
+.label_contacto{
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-weight: bold;
+    size: auto;
+
+}
+
+
+#contacto_section{
+    padding: 0%;
+    padding-left: 0%;
+    margin-left: 0%;
+}
+input.label_contacto{
+    height: 14px;
+    width: 32;
+}
+
+
+#btn_enviar{
+    display: none;
+    margin-left: 50%;
+}
+
+#origen{
+    font-family: sans-serif;
+    line-height: 4vh;
+    margin-left: 10vw;
+    margin-top: 3vh;
+    padding-left: 15px; 
+    padding-right: 20px; 
+    padding-top:1px; 
+    padding-bottom:4px;
+    text-align: right;
+    background-color: #3a5992; 
+    border-radius: 15px; 
+}
+
+#peopleRead, #peopleRead_small{
+    align-self:center;
+    text-align: -webkit-center;
+}
+
+#peopleRead img{
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 30vw;
+}
+
+#origen_small{
+    display: none;
+    font-family: sans-serif;
+    line-height: 4vh;
+    
+    margin-top: 3vh;
+    padding-left: 15px; 
+    padding-right: 20px; 
+    padding-top:1px; 
+    padding-bottom:4px;
+    text-align: center;
+    background-color: #3a5992; 
+    border-radius: 15px; 
+}
+
+#peopleRead_small img{
+    display: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 90vw;
+}
+
+#usuario:hover, #carro_compra:hover{
+    cursor: pointer;
+}
+
+#modal_usuario{
+    border-radius: 10px;
+    display: none;
+    position: absolute;;
+    z-index:1;
+    right:1vw;
+    width: 15vw;
+    height: 11vw;
+    padding: 0.8vw;
+    overflow: hidden;
+    background-color: #f38642;
+}
+
+#modal_usuario a{
+    line-height: 1.5vw;
+    color: black;
+    font-family: sans-serif;
+}
+
+.cerrar{
+    color:black;
+    float: right;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.cerrar:hover, .cerrar:focus{
+    color:black;
+    text-decoration: none;
+    cursor:pointer;
+}
+#label_btn{
+    margin-left: 1%;
+}
+
+#label_btn:hover{
+    cursor: pointer;
+}
+
+.form_contacto .btn_enviar {
+    margin-left: 50%;
+}
+
+#usuario:hover, #carro_compra:hover{
+    cursor: pointer;
+}
+
+#modal_usuario{
+    border-radius: 10px;
+    display: none;
+    position: absolute;;
+    z-index:1;
+    right:1vw;
+    width: 15vw;
+    height: 11vw;
+    padding: 0.8vw;
+    overflow: hidden;
+    background-color: #f38642;
+}
+
+#modal_usuario a{
+    line-height: 1.5vw;
+    color: black;
+    font-family: sans-serif;
+}
+
+.cerrar{
+    color:black;
+    float: right;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.cerrar:hover, .cerrar:focus{
+    color:black;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+
+@media (max-width:750px){
+
+    #usuario_carrito img{
+        width: 7vw;
+        height: 8vw;
+        margin-right: 2vw;
+    }
+
+    #origen{
+        display: none;
+    }
+    #origen_small{
+        display: block;
+    }
+
+    #peopleRead{
+        display: none;
+    }
+    #peopleRead_small img{
+        display: block;
+    }
+
+    header label {
+        display: block;
+    }
+
+    nav{
+        z-index: 99;
+        position: absolute;
+        background: #17252A;
+        margin-left: -100%;
+        transition: all 0.5s;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    #btn_menu:checked ~ nav{
+        margin-left: 0%;
+    }
+
+    #logo{
+        width: 35vw;
+    }
+
+    #box_libro {
+        min-width: 40vw;
+        margin-right: 2vw;
+        margin-left: 2vw;
+    }
+
+    #foto_libro{
+        width: 25vw;
+    }
+
+    nav li a {
+        width: 60vw;
+        font-size: 5vw;
+    }
+
+    footer{
+        font-size: 5vw;
+        line-height: 150%;
+        margin-top: 7vw;
+        padding-bottom: 7vw;
+        background-color: #06070a; 
+    }
+
+
+
+
+
+}
