@@ -24,7 +24,7 @@ class Genero(models.Model): #Lo mismo que más arriba, pero con genero de libro.
     Genero = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.Genero
+        return self.Genero 
 
 class Libro(models.Model):
     Libro_ID = models.AutoField(primary_key=True)
@@ -48,7 +48,7 @@ class Venta(models.Model):
     ApellidoMaterno = models.CharField(max_length=100)
     Fecha = models.DateTimeField(auto_now_add=True)
     Libro_ID = models.ForeignKey(Libro, null=False, on_delete=models.PROTECT)
-    Cantidad_Venta = models.IntegerField(default=0)
+    Cantidad_Venta = models.IntegerField(default=0) 
 
     def __str__(self):
         txt = "({0}) {1} {2} {3} (rut: {4}) compró {5} copia(s) del libro: {6} "
