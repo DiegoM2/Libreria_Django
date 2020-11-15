@@ -10,7 +10,7 @@ class Autor(models.Model):
     Sexo = models.CharField(max_length=1, choices=SEXOS, default='F')
 
     def __str__(self):
-        return self.Nombre
+        return "{0}".format(self.Nombre) 
     
 class Idioma(models.Model): #tabla de idiomas de los libros para no tener que re-escribir los idiomas. 
     Idioma_ID = models.AutoField(primary_key=True)
@@ -51,5 +51,5 @@ class Venta(models.Model):
     Cantidad_Venta = models.IntegerField(default=0)
 
     def __str__(self):
-        txt = "{0} {1} {2} (rut: {3}) compró {4} copia(s) del libro: {5} "
-        return txt.format(self.Nombre, self.ApellidoPaterno, self.ApellidoMaterno, self.Rut, self.Cantidad_Venta, self.Libro_ID)
+        txt = "({0}) {1} {2} {3} (rut: {4}) compró {5} copia(s) del libro: {6} "
+        return txt.format(self.Fecha, self.Nombre, self.ApellidoPaterno, self.ApellidoMaterno, self.Rut, self.Cantidad_Venta, self.Libro_ID)

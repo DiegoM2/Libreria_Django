@@ -1,6 +1,7 @@
 
 {% load static %}
 
+
 <!doctype html>
 <html lang="esp">
 
@@ -69,155 +70,26 @@
     <!-- Esta sección contiene todos los libros. 
     ESTO PRIMERO DEBE CAMBIARSE PARA QUE LOS LIBROS SE CARGUEN DESDE BD, LUEGO HACER QUE SE AGRUPEN EN PÁGINAS CON ALGO COMO 'PAGINATOR'-->
     <section  id="display_libros">
-      
-      {% for libro in libros %}
 
-        {{ libro }}
-        <br>
-      
-      {% endfor %}
-
-      
       <div class="row center-xs"> 
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-            <img id="foto_libro" src="img/libro1.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo">El Código Da Vinci</p> 
-            <p id="lib_autor">Dan Brown</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$18.990</p>
+        {% for libro in obj_pagina%}
+          <div class="col-xs-5 col-sm-2" id="box_libro">
+            <img id="foto_libro" src="{% static 'img/libros/'%}{{libro.RutaImg}}" >
+            <div id="detalles_libro">
+              <p id="lib_titulo">{{libro.Titulo}}</p> 
+              <p id="lib_autor">{{libro.Autor}}</p>
+              <p id="valor_internet_1">Precio Internet</p>
+              <p id="valor_internet_2">{{libro.Precio}}</p>
+            </div>
+            <button class="boton_detalles" type="submit" >Ver Detalles</button>
           </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div>
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-          <img  id="foto_libro" src="img/libro2.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo">El Principito</p> 
-            <p id="lib_autor">Antoine de Saint-Exupéry</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$12.990</p>
-          </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div>
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-          <img id="foto_libro" src="img/libro3.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo">Cien años de Soledad</p> 
-            <p id="lib_autor">Gabriel García Márquez</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$19.990</p>
-          </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div>
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-          <img id="foto_libro" src="img/libro4.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo"> H. P. y la Orden de Fenix
-            <p id="lib_autor">J. K. Rowling</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$19.990</p>
-          </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div>
+          <br>
+        {% endfor %}
       </div>
+        
+      
 
-      <div class="row center-xs"> 
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-            <img id="foto_libro" src="img/libro1.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo">El Código Da Vinci</p> 
-            <p id="lib_autor">Dan Brown</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$18.990</p>
-          </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div>
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-          <img  id="foto_libro" src="img/libro2.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo">El Principito</p> 
-            <p id="lib_autor">Antoine de Saint-Exupéry</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$12.990</p>
-          </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div>
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-          <img id="foto_libro" src="img/libro3.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo">Cien años de Soledad</p> 
-            <p id="lib_autor">Gabriel García Márquez</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$19.990</p>
-          </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div>
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-          <img id="foto_libro" src="img/libro4.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo"> H. P. y la Orden de Fenix
-            <p id="lib_autor">J. K. Rowling</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$19.990</p>
-          </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div>
-      </div>
-
-      <div class="row center-xs"> 
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-            <img id="foto_libro" src="img/libro1.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo">El Código Da Vinci</p> 
-            <p id="lib_autor">Dan Brown</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$18.990</p>
-          </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div>
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-          <img  id="foto_libro" src="img/libro2.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo">El Principito</p> 
-            <p id="lib_autor">Antoine de Saint-Exupéry</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$12.990</p>
-          </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div>
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-          <img id="foto_libro" src="img/libro3.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo">Cien años de Soledad</p> 
-            <p id="lib_autor">Gabriel García Márquez</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$19.990</p>
-          </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div>
-
-        <div class="col-xs-5 col-sm-2" id="box_libro">
-          <img id="foto_libro" src="img/libro4.jpg">
-          <div id="detalles_libro">
-            <p id="lib_titulo"> H. P. y la Orden de Fenix
-            <p id="lib_autor">J. K. Rowling</p>
-            <p id="valor_internet_1">Precio Internet</p>
-            <p id="valor_internet_2">$19.990</p>
-          </div>
-          <button class="boton_detalles" type="submit" >Ver Detalles</button>
-        </div> 
-      </div> 
+      
 
     </section>
 
