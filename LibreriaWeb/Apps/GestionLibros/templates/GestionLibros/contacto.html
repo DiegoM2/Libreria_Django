@@ -22,31 +22,6 @@
   <body>
     {%include "./header.html" %} <!--Esto importa el header completo definido en header.html-->
 
-  <a  href="index.html">Inicio</a>
-        </li>
-        <li>
-          <a href="">Los más vendidos</a>
-        </li>
-        <li>
-          <a  href="">Ofertas</a>
-        </li>
-        <li>
-          <a  href="">Géneros</a>
-        </li>
-        <li>
-          <a  href="nosotros.html">Quienes somos</a>
-        </li>
-        <li>
-          <a  href="contacto.html">Contacto</a>
-        </li>
-      </ul>
-
-    </nav>
-
-  </header>
-
-
-
   <!-- Esta sección contiene los datos a ingresar-->
   <div class="row right" id="contacto_section">
     <div class="col-xs-12" id="contactenos">
@@ -110,7 +85,7 @@
       <div>
         <button type="submit" title="Enviar" id="btn_enviar">
         </button>
-        <label id="label_btn" for="btn_enviar"> <img src="img/btn.png" height="46.4px" width="100.8px"></label>
+        <label id="label_btn" for="btn_enviar"> <img src="{% static 'img/btn.png'%}" height="46.4px" width="100.8px"></label>
       </div>
 
   </form>
