@@ -53,3 +53,10 @@ class Venta(models.Model):
     def __str__(self):
         txt = "({0}) {1} {2} {3} (rut: {4}) compró {5} copia(s) del libro: {6} "
         return txt.format(self.Fecha, self.Nombre, self.ApellidoPaterno, self.ApellidoMaterno, self.Rut, self.Cantidad_Venta, self.Libro_ID)
+
+class Mensaje(models.Model):
+    Nombre = models.CharField(max_length=100)
+    Asunto = models.CharField(max_length=100)
+    Mail = models.CharField(max_length=100)
+    Telefono = models.CharField(max_length=100)
+    Comentario = models.CharField(max_length=100)

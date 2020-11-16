@@ -74,7 +74,7 @@ function logIn(){
 }
 
 
-function enviarCorreo(){
+function guardarMsg(){
   var asunto = document.getElementById("asunto").value;
   var nombre = document.getElementById("nombre").value;
   var email = document.getElementById("email").value;
