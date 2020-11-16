@@ -22,75 +22,98 @@
   <body>
     {%include "./header.html" %} <!--Esto importa el header completo definido en header.html-->
 
-    <!-- Esta sección contiene los datos a ingresar-->
-    <div class="row right" id="contacto_section">
-      <div class="col-xs-12" id="contactenos">
-        <p class="label_contacto"> Contáctenos
-        </p>
-      </div>
-      <br>
-      <div class="col-xs-12" id="Contactenos_1">
-        ¿En qué podemos ayudarte?
+  <a  href="index.html">Inicio</a>
+        </li>
+        <li>
+          <a href="">Los más vendidos</a>
+        </li>
+        <li>
+          <a  href="">Ofertas</a>
+        </li>
+        <li>
+          <a  href="">Géneros</a>
+        </li>
+        <li>
+          <a  href="nosotros.html">Quienes somos</a>
+        </li>
+        <li>
+          <a  href="contacto.html">Contacto</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- Esta sección contiene los datos a ingresar-->
+  <div class="row right" id="contacto_section">
+    <div class="col-xs-12" id="contactenos">
+      <p class="label_contacto"> Contáctenos
+      </p>
+    </div>
+    <br>
+    <div class="col-xs-12" id="Contactenos_1">
+      ¿En qué podemos ayudarte?
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <form class="form_contacto">
+    <div class="col-xs-12">
+      <label class="label_contacto" for="asunto"> Asunto </label>
+      <div>
+        <select name="asunto" id="asunto" aria-required="true" style="width: 50vw; height: 32px;">
+          <option value="Consulta de título(s)">Consulta de título(s)</option>
+          <option value="Contacto Comercial">Contacto Comercial</option>
+          <option value="Cotizaciones">Cotizaciones</option>
+          <option value="Sugerencias/Reclamos">Sugerencias/Reclamos</option>
+          <option value="Otros">Otros</option>
+        </select>
+
       </div>
     </div>
 
-    <br>
-    <br>
+    <div class="col-xs-12">
+      <label class="label_contacto" for="nombre"> Nombre </label>
+      <div>
+        <input id="nombre" type="text" maxlength="50" style="width: 50vw; height: 32px;" 
+          pattern=[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25}+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25}+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25}"
+          oninvalid="setCustomValidity('Nombre invalido ' )" required>
+      </div>
+    </div>
 
-    <form class="form_contacto">
-      <div class="col-xs-12">
-        <label class="label_contacto" for="asunto"> Asunto </label>
-        <div>
-          <select name="asunto" id="asunto" aria-required="true" style="width: 50vw; height: 32px;">
-            <option value="Consulta de título(s)">Consulta de título(s)</option>
-            <option value="Contacto Comercial">Contacto Comercial</option>
-            <option value="Cotizaciones">Cotizaciones</option>
-            <option value="Sugerencias/Reclamos">Sugerencias/Reclamos</option>
-            <option value="Otros">Otros</option>
-          </select>
+    <div class="col-xs-12">
+      <label class="label_contacto" for="email"> Email </label>
+      <div>
+        <input id="email" type="text" maxlength="60" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" style="width: 50vw; height: 32px; " oninvalid="setCustomValidity('Ingrese un Mail Valido')" required >
+      </div>
+    </div>
 
-        </div>
+    <div class="col-xs-12">
+      <label class="label_contacto" for="numero_telefonico"> Numero Telefónico </label>
+      <div>
+        <input id="numero" type="tel" max="12" style="width: 50vw; height: 32px;"   oninvalid="setCustomValidity('telefono invalido,debe ser de 9 digitos')"  required >
+      </div>
       </div>
 
-      <div class="col-xs-12">
-        <label class="label_contacto" for="nombre"> Nombre </label>
+        <div class=" col-xs-12">
+        <label class="label_contacto" for="comentarios"> Comentarios </label>
         <div>
-          <input id="nombre" type="text" maxlength="50" style="width: 50vw; height: 32px;" 
-            pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
-            oninvalid="setCustomValidity('Nombre invalido ')">
+          <input id="comentario" type="text" maxlength="300" style="width: 50vw; height : 50px" required >
         </div>
       </div>
-
-      <div class="col-xs-12">
-        <label class="label_contacto" for="email"> Email </label>
-        <div>
-          <input id="email" type="text" maxlength="60" style="width: 50vw; height: 32px; " >
-        </div>
+      <br>
+      <div>
+        <button type="submit" title="Enviar" id="btn_enviar">
+        </button>
+        <label id="label_btn" for="btn_enviar"> <img src="img/btn.png" height="46.4px" width="100.8px"></label>
       </div>
 
-      <div class="col-xs-12">
-        <label class="label_contacto" for="numero_telefonico"> Numero Telefónico </label>
-        <div>
-          <input id="numero" type="tel" max="12" style="width: 50vw; height: 32px;"  pattern="^[9|8|7|6]\d{8}$" oninvalid="setCustomValidity('telefono invalido,debe ser de 9 digitos')"   >
-        </div>
-        </div>
-
-          <div class=" col-xs-12">
-          <label class="label_contacto" for="comentarios"> Comentarios </label>
-          <div>
-            <input id="comentario" type="text" maxlength="300" style="width: 50vw; height : 50px" >
-          </div>
-        </div>
-        <br>
-        <div>
-          <button type="submit" title="Enviar" id="btn_enviar" onclick="enviarCorreo()">
-          </button>
-          <label id="label_btn" for="btn_enviar"> <img src= "{% static 'img/btn.png' %}" height="46.4px" width="100.8px"></label>
-        </div>
-
-    </form>
-    <script src="{% static 'js/script.js' %}"></script>
-  </body>
+  </form>
 
   {% include "./footer.html" %}
 
